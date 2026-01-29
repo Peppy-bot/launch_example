@@ -4,7 +4,7 @@
       source: {
         repo: "https://github.com/Peppy-bot/example_nodes.git",
         path: "fake_robot_brain",
-        ref: "0.1.0"
+        ref: "main"
       },
       // Example if this was an url
       // source: {
@@ -22,7 +22,7 @@
       source: {
         repo: "https://github.com/Peppy-bot/example_nodes.git",
         path: "fake_openarm01_controller",
-        ref: "0.1.0"
+        ref: "main"
       },
       instances: [
         {
@@ -35,7 +35,7 @@
       source: {
         repo: "https://github.com/Peppy-bot/example_nodes.git",
         path: "fake_uvc_camera",
-        ref: "0.1.0"
+        ref: "main"
       },
       instances: [
         {
@@ -52,7 +52,7 @@
                 width: 1920,
                 height: 1080,
               },
-              encoding: "yuyv",
+              encoding: "rgb",
             },
           }
         },
@@ -70,7 +70,7 @@
                 width: 1920,
                 height: 1080,
               },
-              encoding: "yuyv",
+              encoding: "rgb",
             },
           }
         }
