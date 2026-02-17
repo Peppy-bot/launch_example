@@ -3,8 +3,7 @@
     {
       source: {
         repo: "https://github.com/Peppy-bot/example_nodes.git",
-        // Most of the time the AI brain is written in Python
-        path: "python/fake_robot_brain",
+        path: "rust/fake_robot_brain",
         ref: "v0.3.0"
       },
       // Example if this was an url

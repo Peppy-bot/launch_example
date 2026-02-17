@@ -1,0 +1,95 @@
+{
+  deployments: [
+    {
+      source: {
+        repo: "https://github.com/Peppy-bot/example_nodes.git",
+        // Most of the time the AI brain is written in Python
+        path: "python/fake_robot_brain",
+        ref: "v0.3.0"
+      },
+      // Example if this was an url
+      // source: {
+      //   url: "https://example.com/fake_robot_brain.tar.zst",
+      //   sha256: "33e83da60a54e3bb487a9a3b67705918602143b30f158143b6909acaf017a36a"
+      // },
+      instances: [
+        {
+          instance_id: "the_brain",
+          arguments: {}
+        }
+      ],
+    },
+    {
+      source: {
+        repo: "https://github.com/Peppy-bot/example_nodes.git",
+        path: "python/fake_openarm01_controller",
+        ref: "v0.3.0"
+      },
+      instances: [
+        {
+          instance_id: "the_nervous_system",
+          arguments: {}
+        }
+      ]
+    },
+    {
+      source: {
+        repo: "https://github.com/Peppy-bot/example_nodes.git",
+        path: "python/fake_uvc_camera",
+        ref: "v0.3.0"
+      },
+      instances: [
+        {
+          instance_id: "camera_front",
+          arguments: {
+            device: {
+              physical: "/dev/video_right",
+              sim: "mujoco:camera_right",
+              priority: "physical"
+            },
+            video: {
+              frame_rate: 30,
+              resolution: {
+                width: 1920,
+                height: 1080,
+              },
+              encoding: "rgb",
+            },
+          }
+        },
+        {
+          instance_id: "camera_rear",
+          arguments: {
+            device: {
+              physical: "/dev/video_left",
+              sim: "mujoco:camera_left",
+              priority: "physical"
+            },
+            video: {
+              frame_rate: 30,
+              resolution: {
+                width: 1920,
+                height: 1080,
+              },
+              encoding: "rgb",
+            },
+          }
+        }
+      ]
+    },
+    {
+      // This one is stored locally on the filesystem
+      source: {
+        local: "./fake_video_reconstruction"
+      },
+      instances: [
+        {
+          instance_id: "video_reconstruction_1",
+          arguments: {
+            video_duration_seconds: 5
+          }
+        }
+      ]
+    },
+  ]
+}
