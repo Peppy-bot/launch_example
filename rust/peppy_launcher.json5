@@ -4,7 +4,7 @@
       source: {
         repo: "https://github.com/Peppy-bot/example_nodes.git",
         path: "rust/fake_robot_brain",
-        ref: "v0.3.0"
+        ref: "v0.3.4"
       },
       // Example if this was an url
       // source: {
@@ -22,7 +22,7 @@
       source: {
         repo: "https://github.com/Peppy-bot/example_nodes.git",
         path: "rust/fake_openarm01_controller",
-        ref: "v0.3.0"
+        ref: "v0.3.4"
       },
       instances: [
         {
@@ -35,7 +35,7 @@
       source: {
         repo: "https://github.com/Peppy-bot/example_nodes.git",
         path: "rust/fake_uvc_camera",
-        ref: "v0.3.0"
+        ref: "v0.3.4"
       },
       instances: [
         {

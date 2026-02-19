@@ -5,7 +5,7 @@
         repo: "https://github.com/Peppy-bot/example_nodes.git",
         // Most of the time the AI brain is written in Python
         path: "python/fake_robot_brain",
-        ref: "v0.3.0"
+        ref: "v0.3.4"
       },
       // Example if this was an url
       // source: {
@@ -23,7 +23,7 @@
       source: {
         repo: "https://github.com/Peppy-bot/example_nodes.git",
         path: "python/fake_openarm01_controller",
-        ref: "v0.3.0"
+        ref: "v0.3.4"
       },
       instances: [
         {
@@ -36,7 +36,7 @@
       source: {
         repo: "https://github.com/Peppy-bot/example_nodes.git",
         path: "python/fake_uvc_camera",
-        ref: "v0.3.0"
+        ref: "v0.3.4"
       },
       instances: [
         {
