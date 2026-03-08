@@ -11,6 +11,10 @@
       //   url: "https://example.com/fake_robot_brain.tar.zst",
       //   sha256: "33e83da60a54e3bb487a9a3b67705918602143b30f158143b6909acaf017a36a"
       // },
+      // Example if this was a local path
+      // source: {
+      //   local: "./fake_robot_brain"
+      // },
       instances: [
         {
           instance_id: "the_brain",
@@ -77,9 +81,10 @@
       ]
     },
     {
-      // This one is stored locally on the filesystem
       source: {
-        local: "./fake_video_reconstruction"
+        repo: "https://github.com/Peppy-bot/example_nodes.git",
+        path: "rust/fake_video_reconstruction",
+        ref: "main"
       },
       instances: [
         {
