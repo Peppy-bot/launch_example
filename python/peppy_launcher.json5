@@ -38,6 +38,19 @@
     {
       source: {
         repo: "https://github.com/Peppy-bot/example_nodes.git",
+        path: "python/fake_openarm01_arm",
+        ref: "main"
+      },
+      instances: [
+        {
+          instance_id: "the_robot_arm",
+          arguments: {}
+        }
+      ]
+    },
+    {
+      source: {
+        repo: "https://github.com/Peppy-bot/example_nodes.git",
         path: "python/fake_uvc_camera",
         ref: "main"
       },
