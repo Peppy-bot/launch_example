@@ -72,7 +72,7 @@
         {
           instance_id: "camera_rear",
           arguments: {
-            device_path: "/dev/video1"
+            device_path: "/dev/video1",
             video: {
               frame_rate: 30,
               resolution: {
