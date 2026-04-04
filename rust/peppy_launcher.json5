@@ -2,18 +2,33 @@
   deployments: [
     {
       source: {
-        repo: "https://github.com/Peppy-bot/example_nodes.git",
-        path: "rust/fake_robot_brain",
-        ref: "main"
+        repo: "https://github.com/Peppy-bot/nodes_hub.git",
+        path: "robot_brain_etcher1",
+        ref: "main",
+        variant: {
+          // When only the name is provided, the variant is searched inside the original repo in the variants folder defined by the root manifest
+          name: "mock-rust"
+        }
       },
       // Example if this was an url
       // source: {
       //   url: "https://example.com/fake_robot_brain.tar.zst",
-      //   sha256: "33e83da60a54e3bb487a9a3b67705918602143b30f158143b6909acaf017a36a"
+      //   sha256: "33e83da60a54e3bb487a9a3b67705918602143b30f158143b6909acaf017a36a",
+      //   // With an url variant
+      //   variant: {
+      //     url: "https://example.com/fake_robot_brain.tar.zst",
+      //     sha256: "33e83da60a54e3bb487a9a3b67705918602143b30f158143b6909acaf017a36a",
+      //   }
       // },
       // Example if this was a local path
       // source: {
-      //   local: "./fake_robot_brain"
+      //   local: "./local_robot_brain",
+      //   // With a git variant (not a variant defined in `./local_robot_brain/peppy.json5`)
+      //   variant: {
+      //     repo: "https://github.com/Peppy-bot/nodes_hub.git",
+      //     path: "my_example_variant",
+      //     ref: "main",
+      //   }
       // },
       instances: [
         {
@@ -24,9 +39,12 @@
     },
     {
       source: {
-        repo: "https://github.com/Peppy-bot/example_nodes.git",
-        path: "rust/fake_openarm01_controller",
-        ref: "main"
+        repo: "https://github.com/Peppy-bot/nodes_hub.git",
+        path: "openarm01_controller",
+        ref: "main",
+        variant: {
+          name: "mock-rust"
+        }
       },
       instances: [
         {
@@ -37,9 +55,12 @@
     },
     {
       source: {
-        repo: "https://github.com/Peppy-bot/example_nodes.git",
-        path: "rust/fake_openarm01_arm",
-        ref: "main"
+        repo: "https://github.com/Peppy-bot/nodes_hub.git",
+        path: "openarm01_arm",
+        ref: "main",
+        variant: {
+          name: "mock-rust"
+        }
       },
       instances: [
         {
@@ -50,9 +71,12 @@
     },
     {
       source: {
-        repo: "https://github.com/Peppy-bot/example_nodes.git",
-        path: "rust/fake_uvc_camera",
-        ref: "main"
+        repo: "https://github.com/Peppy-bot/nodes_hub.git",
+        path: "uvc_camera",
+        ref: "main",
+        variant: {
+          name: "mock-rust"
+        }
       },
       instances: [
         {
@@ -65,7 +89,8 @@
                 width: 1920,
                 height: 1080,
               },
-              encoding: "rgb",
+              camera_encoding: "mjpeg",
+              topic_encoding: "rgb8",
             },
           }
         },
@@ -79,7 +104,8 @@
                 width: 1920,
                 height: 1080,
               },
-              encoding: "rgb",
+              camera_encoding: "mjpeg",
+              topic_encoding: "rgb8",
             },
           }
         }
@@ -87,9 +113,12 @@
     },
     {
       source: {
-        repo: "https://github.com/Peppy-bot/example_nodes.git",
-        path: "rust/fake_video_reconstruction",
-        ref: "main"
+        repo: "https://github.com/Peppy-bot/nodes_hub.git",
+        path: "uvc_camera_video_reconstruction",
+        ref: "main",
+        variant: {
+          name: "rust"
+        }
       },
       instances: [
         {
