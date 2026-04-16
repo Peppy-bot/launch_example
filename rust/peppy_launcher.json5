@@ -1,15 +1,16 @@
 {
   deployments: [
     {
-      source: {
-        repo: "https://github.com/Peppy-bot/nodes_hub.git",
-        path: "robot_brain_etcher1",
-        ref: "main",
-        variant: {
-          // When only the name is provided, the variant is searched inside the original repo in the variants folder defined by the root manifest
-          name: "mock-rust"
-        }
-      },
+      // Example if this was a node in a git location
+      // source: {
+      //   repo: "https://github.com/Peppy-bot/nodes_hub.git",
+      //   path: "robot_brain_etcher1",
+      //   ref: "main",
+      //   variant: {
+      //     // When only the name is provided, the variant is searched inside the original repo in the variants folder defined by the root manifest
+      //     name: "mock-rust"
+      //   }
+      // },
       // Example if this was an url
       // source: {
       //   url: "https://example.com/fake_robot_brain.tar.zst",
@@ -30,6 +31,13 @@
       //     ref: "main",
       //   }
       // },
+      source: {
+        name: "robot_brain_etcher1:0.1.0",
+        variant: {
+          // When only the name is provided, the variant is searched inside the original repo in the variants folder defined by the root manifest
+          name: "mock-rust"
+        }
+      },
       instances: [
         {
           instance_id: "the_brain",
@@ -39,9 +47,8 @@
     },
     {
       source: {
-        repo: "https://github.com/Peppy-bot/nodes_hub.git",
-        path: "openarm01_controller",
-        ref: "main",
+        name: "openarm01_controller",
+        tag: "0.1.0",
         variant: {
           name: "mock-rust"
         }
@@ -55,9 +62,7 @@
     },
     {
       source: {
-        repo: "https://github.com/Peppy-bot/nodes_hub.git",
-        path: "openarm01_arm",
-        ref: "main",
+        name: "openarm01_arm:0.1.0",
         variant: {
           name: "mock-rust"
         }
@@ -71,9 +76,7 @@
     },
     {
       source: {
-        repo: "https://github.com/Peppy-bot/nodes_hub.git",
-        path: "uvc_camera",
-        ref: "main",
+        name: "uvc_camera:0.1.0",
         variant: {
           name: "mock-rust"
         }
@@ -113,9 +116,7 @@
     },
     {
       source: {
-        repo: "https://github.com/Peppy-bot/nodes_hub.git",
-        path: "uvc_camera_video_reconstruction",
-        ref: "main",
+        name: "uvc_camera_video_reconstruction:0.1.0",
         variant: {
           name: "rust"
         }
